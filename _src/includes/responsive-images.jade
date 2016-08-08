@@ -1,0 +1,18 @@
+.card#responsive-images
+	h2.card-header= 'Responsive images'
+	.card-block
+		.container
+			.row.m-b-1
+				.col-xs-12
+					img.img-fluid(src='http://placehold.it/544x408', srcset='http://placehold.it/544x408 544w, http://placehold.it/992x744 992w', sizes='100vw')
+			.row.m-b-1
+				.col-xs-6
+					img.img-fluid(src='http://placehold.it/272x204', srcset='http://placehold.it/272x204 272w, http://placehold.it/496x372 496w', sizes='50vw')
+				.col-xs-6
+					img.img-fluid(src='http://placehold.it/272x204', srcset='http://placehold.it/272x204 272w, http://placehold.it/496x372 496w', sizes='50vw')
+			.row.m-b-1
+				.col-xs-12
+					picture
+						source(media='(min-width: 48em)', srcset='http://lorempixel.com/992/744/city/1 992w')
+						source(srcset='http://lorempixel.com/272/204/city/2 272w, http://lorempixel.com/544/408/city/2 544w')
+						img.img-fluid(src='http://lorempixel.com/992/744/city/1')

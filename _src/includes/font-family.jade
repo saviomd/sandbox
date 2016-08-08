@@ -1,0 +1,108 @@
+<!-- http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/ -->
+
+- var fontFamilies = ['Arial', 'Baskerville', 'Cambria', 'Century Gothic', 'Consolas', 'Copperplate Light', 'Courier New', 'Franklin Gothic Medium', 'Futura', 'Garamond', 'Geneva', 'Georgia', 'Gill Sans', 'Helvetica', 'Impact', 'Lucida Sans', 'Palatino', 'Tahoma', 'Times', 'Trebuchet MS', 'Verdana']
+- var exampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum lorem sit amet mauris porttitor porta. ABCDEFGHIJKLMNOPQRSTUVWXYZ. abcdefghijklmnopqrstuvwxyz. 1234567890 &lt;&gt;@#$%&?!'
+
+style.
+	.arial {
+		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	}
+	.baskerville h3 {
+		font-family: Baskerville, Times, "Times New Roman", serif;
+	}
+	.baskerville p {
+		font-family: Baskerville, "Times New Roman", Times, serif;
+	}
+	.cambria {
+		font-family: Cambria, Georgia, Times, "Times New Roman", serif;
+	}
+	.century-gothic {
+		font-family: "Century Gothic", "Apple Gothic", sans-serif;
+	}
+	.consolas {
+		font-family: Consolas, "Lucida Console", Monaco, monospace;
+	}
+	.copperplate-light {
+		font-family: "Copperplate Light", "Copperplate Gothic Light", serif;
+	}
+	.courier-new {
+		font-family: "Courier New", Courier, monospace;
+	}
+	.franklin-gothic-medium {
+		font-family: "Franklin Gothic Medium", "Arial Narrow Bold", Arial, sans-serif;
+	}
+	.futura {
+		font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
+	}
+	.garamond h3 {
+		font-family: Garamond, "Hoefler Text", Palatino, "Palatino Linotype", serif;
+	}
+	.garamond p {
+		font-family: Garamond, "Hoefler Text", Times New Roman, Times, serif;
+	}
+	.geneva h3 {
+		font-family: Geneva, Verdana, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	}
+	.geneva p {
+		font-family: Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+	}
+	.georgia h3 {
+		font-family: Georgia, Times, "Times New Roman", serif;
+	}
+	.georgia p {
+		font-family: Georgia, Palatino," Palatino Linotype", Times, "Times New Roman", serif;
+	}
+	.gill-sans h3 {
+		font-family: "Gill Sans", "Trebuchet MS", Calibri, sans-serif;
+	}
+	.gill-sans p {
+		font-family: "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+	}
+	.helvetica h3 {
+		font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+	}
+	.helvetica p {
+		font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	}
+	.impact {
+		font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	}
+	.lucida-sans {
+		font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	}
+	.palatino h3 {
+		font-family: Palatino, "Palatino Linotype", "Hoefler Text", Times, "Times New Roman", serif;
+	}
+	.palatino p {
+		font-family: Palatino, "Palatino Linotype", Georgia, Times, "Times New Roman", serif;
+	}
+	.tahoma h3 {
+		font-family: Tahoma, Verdana, Geneva;
+	}
+	.tahoma p {
+		font-family: Tahoma, Geneva, Verdana;
+	}
+	.times {
+		font-family: Times, "Times New Roman", Georgia, serif;
+	}
+	.trebuchet-ms h3 {
+		font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+	}
+	.trebuchet-ms p {
+		font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande"," Lucida Sans", Arial, sans-serif;
+	}
+	.verdana h3 {
+		font-family: Verdana, Tahoma, Geneva, sans-serif;
+	}
+	.verdana p {
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+	}
+
+.card#font-family
+	h2.card-header= 'Font-family'
+	.card-block
+		each fontFamily in fontFamilies
+			- var text = fontFamily + '. ' + exampleText
+			div(class=fontFamily.toLowerCase().replace(/ /g, '-'))
+				h3!= text
+				p!= text
