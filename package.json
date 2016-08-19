@@ -1,6 +1,6 @@
 {
   "name": "sandbox",
-  "version": "1.0.20160808",
+  "version": "1.0.20160818",
   "description": "Experimentos e testes",
   "author": "Sávio Mendes",
   "license": "No license",
@@ -13,7 +13,7 @@
     "animate.css": "3.5.1",
     "bootstrap": "4.0.0-alpha.3",
     "browser-sync": "2.14.0",
-    "del": "2.2.1",
+    "del": "2.2.2",
     "font-awesome": "4.6.3",
     "gulp-concat": "2.6.0",
     "gulp-jade": "1.1.0",
