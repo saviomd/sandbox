@@ -12,24 +12,22 @@
     <script src="js/vendor.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-light bg-faded m-b-1">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12 col-md-8 offset-md-2">
-            <div class="navbar-brand">Sandbox</div>
-            <button type="button" data-toggle="collapse" data-target="#navbar-menu" class="navbar-toggler pull-right">&#9776; Menu</button>
-          </div>
+    <nav class="navbar navbar-light bg-faded mb-3">
+      <div class="row">
+        <div class="col">
+          <div class="navbar-brand">Sandbox</div>
         </div>
-        <div class="row">
-          <div class="col-xs-12 col-md-3 offset-md-7">
-            <nav id="navbar-menu" class="collapse list-group js-nav-section"></nav>
+        <div class="col">
+          <div class="dropdown text-right">
+            <button data-toggle="dropdown" class="btn btn-secondary dropdown-toggle">Menu</button>
+            <div class="dropdown-menu dropdown-menu-right js-nav-section"></div>
           </div>
         </div>
       </div>
     </nav>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12 col-md-8 offset-md-2"><!-- http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/ -->
+        <div class="col-12 col-md-8 offset-md-2"><!-- http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/ -->
           <style>
             .arial {
             	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -126,7 +124,7 @@
             }
             
           </style>
-          <div id="font-family" class="card">
+          <div id="font-family" class="card mb-3">
             <h2 class="card-header">Font-family</h2>
             <div class="card-block">
               <div class="arial">
@@ -215,7 +213,7 @@
               </div>
             </div>
           </div>
-          <div id="font-size" class="card">
+          <div id="font-size" class="card mb-3">
             <h2 class="card-header">Font-size</h2>
             <div class="card-block">
               <p style="font-size: 72px">72. Lorem ipsum dolor sit amet</p>
@@ -236,11 +234,11 @@
               <p style="font-size: 6px">6. Lorem ipsum dolor sit amet</p>
             </div>
           </div><!-- http://imsky.github.io/holder/ -->
-          <div id="holder" class="card">
+          <div id="holder" class="card mb-3">
             <h2 class="card-header">Holder.js</h2>
             <div class="card-block"><img data-src="holder.js/800x600?auto=yes&amp;bg=ccc&amp;fg=666&amp;text=Hello&amp;size=30&amp;align=left&amp;outline=yes" class="img-fluid"></div>
           </div><!-- http://rog.ie/post/9089341529/html5boilerplatejs -->
-          <div id="navigator" class="card">
+          <div id="navigator" class="card mb-3">
             <h2 class="card-header">navigator</h2>
             <div class="card-block">
               <script>
@@ -261,19 +259,19 @@
               </script>
             </div>
           </div>
-          <div id="responsive-images" class="card">
+          <div id="responsive-images" class="card mb-3">
             <h2 class="card-header">Responsive images</h2>
             <div class="card-block">
               <div class="container">
-                <div class="row m-b-1">
-                  <div class="col-xs-12"><img src="http://placehold.it/544x408" srcset="http://placehold.it/544x408 544w, http://placehold.it/992x744 992w" sizes="100vw" class="img-fluid"></div>
+                <div class="row mb-3">
+                  <div class="col-12"><img src="http://placehold.it/544x408" srcset="http://placehold.it/544x408 544w, http://placehold.it/992x744 992w" sizes="100vw" class="img-fluid"></div>
                 </div>
-                <div class="row m-b-1">
-                  <div class="col-xs-6"><img src="http://placehold.it/272x204" srcset="http://placehold.it/272x204 272w, http://placehold.it/496x372 496w" sizes="50vw" class="img-fluid"></div>
-                  <div class="col-xs-6"><img src="http://placehold.it/272x204" srcset="http://placehold.it/272x204 272w, http://placehold.it/496x372 496w" sizes="50vw" class="img-fluid"></div>
+                <div class="row mb-3">
+                  <div class="col-6"><img src="http://placehold.it/272x204" srcset="http://placehold.it/272x204 272w, http://placehold.it/496x372 496w" sizes="50vw" class="img-fluid"></div>
+                  <div class="col-6"><img src="http://placehold.it/272x204" srcset="http://placehold.it/272x204 272w, http://placehold.it/496x372 496w" sizes="50vw" class="img-fluid"></div>
                 </div>
-                <div class="row m-b-1">
-                  <div class="col-xs-12">
+                <div class="row mb-3">
+                  <div class="col-12">
                     <picture>
                       <source media="(min-width: 48em)" srcset="http://lorempixel.com/992/744/city/1 992w">
                       <source srcset="http://lorempixel.com/272/204/city/2 272w, http://lorempixel.com/544/408/city/2 544w"><img src="http://lorempixel.com/992/744/city/1" class="img-fluid">
@@ -283,7 +281,7 @@
               </div>
             </div>
           </div>
-          <div id="share" class="card">
+          <div id="share" class="card mb-3">
             <h2 class="card-header">Share</h2>
             <div class="card-block"><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsaviomd.com%2Fsandbox%2F" target="_blank" class="btn btn-secondary js-link-share">Facebook</a> <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fsaviomd.com%2Fsandbox%2F&amp;text=Sandbox" target="_blank" class="btn btn-secondary js-link-share">Twitter</a> <a href="https://plus.google.com/share?url=http%3A%2F%2Fsaviomd.com%2Fsandbox%2F" target="_blank" class="btn btn-secondary js-link-share">Google +</a> 
             </div>
@@ -295,7 +293,7 @@
               });
             </script>
           </div>
-          <div id="xbox" class="card">
+          <div id="xbox" class="card mb-3">
             <h2 class="card-header">Xbox</h2>
             <div class="card-block">
               <iframe src="http://gamercard.xbox.com/pt-BR/saviomd.card" height="135" width="200"></iframe><img src="https://avatar-ssl.xboxlive.com/avatar/saviomd/avatar-body.png"><img src="https://avatar-ssl.xboxlive.com/avatar/saviomd/avatarpic-xl.png" class="img-fluid"><img src="https://avatar-ssl.xboxlive.com/avatar/saviomd/avatarpic-l.png"><img src="https://avatar-ssl.xboxlive.com/avatar/saviomd/avatarpic-s.png">
@@ -305,7 +303,7 @@
       </div>
       <div class="small text-center">
         <hr>
-        <p>&copy; 2008-2016 Sávio Mendes, <a href="http://saviomd.com/">saviomd.com</a></p>
+        <p>&copy; 2008-2017 Sávio Mendes, <a href="http://saviomd.com/">saviomd.com</a></p>
       </div>
     </div>
     <script>
@@ -313,7 +311,7 @@
       $('.card').each(function(){
       	var href = '#' + this.id;
       	var text = $(this).find('.card-header').text();
-      	navItens.push('<a class="list-group-item" href="' + href + '">' + text + '</a>');
+      	navItens.push('<a class="dropdown-item" href="' + href + '">' + text + '</a>');
       });
       $('.js-nav-section').html(navItens).find('a').smoothScroll();
     </script>

@@ -7,18 +7,17 @@ block pageData
 extends /templates/default.jade
 
 block content
-	nav.navbar.navbar-light.bg-faded.m-b-1
-		.container-fluid
-			.row
-				.col-xs-12.col-md-8.offset-md-2
-					.navbar-brand= page.title
-					button.navbar-toggler.pull-right(type='button', data-toggle='collapse', data-target='#navbar-menu')!= '&#9776; Menu'
-			.row
-				.col-xs-12.col-md-3.offset-md-7
-					nav#navbar-menu.collapse.list-group.js-nav-section
+	nav.navbar.navbar-light.bg-faded.mb-3
+		.row
+			.col
+				.navbar-brand= page.title
+			.col
+				.dropdown.text-right
+					button.btn.btn-secondary.dropdown-toggle(data-toggle='dropdown')= 'Menu'
+					.dropdown-menu.dropdown-menu-right.js-nav-section
 	.container-fluid
 		.row
-			.col-xs-12.col-md-8.offset-md-2
+			.col-12.col-md-8.offset-md-2
 				include /includes/font-family.jade
 				include /includes/font-size.jade
 				include /includes/holder.jade
@@ -36,6 +35,6 @@ block content
 		$('.card').each(function(){
 			var href = '#' + this.id;
 			var text = $(this).find('.card-header').text();
-			navItens.push('<a class="list-group-item" href="' + href + '">' + text + '</a>');
+			navItens.push('<a class="dropdown-item" href="' + href + '">' + text + '</a>');
 		});
 		$('.js-nav-section').html(navItens).find('a').smoothScroll();
