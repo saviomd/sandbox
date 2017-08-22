@@ -20,7 +20,7 @@
 
 .card.mb-3#share
 	h2.card-header= 'Share'
-	.card-block
+	.card-body
 		each socialNetwork in socialNetworks
 			- var url = socialNetwork.url.replace('{{url}}', linkShare.url)
 			if (socialNetwork.name === 'Twitter')

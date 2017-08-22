@@ -36,7 +36,7 @@ gulp.task('cssVendor', function() {
 gulp.task('jsVendor', function() {
 	return gulp.src([
 			'node_modules/jquery/dist/jquery.min.js',
-			'node_modules/tether/dist/js/tether.min.js',
+			'node_modules/popper.js/dist/umd/popper.min.js',
 			'node_modules/bootstrap/dist/js/bootstrap.min.js',
 			'node_modules/holderjs/holder.min.js',
 			'node_modules/jquery-smooth-scroll/jquery.smooth-scroll.min.js',

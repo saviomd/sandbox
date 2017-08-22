@@ -100,7 +100,7 @@ style.
 
 .card.mb-3#font-family
 	h2.card-header= 'Font-family'
-	.card-block
+	.card-body
 		each fontFamily in fontFamilies
 			- var text = fontFamily + '. ' + exampleText
 			div(class=fontFamily.toLowerCase().replace(/ /g, '-'))
