@@ -1,36 +1,25 @@
 block pageData
-	- var page = {}
-	- page.path = ''
-	- page.title = 'Sandbox'
-	- page.description = 'Experimentos e testes'
+	-
+		page = {}
+		page.path = ''
+		page.title = 'Sandbox'
+		page.description = 'Experimentos e testes'
 
-extends /templates/default.jade
+		pages = [
+			{id: 'font-family', name: 'Font family'},
+			{id: 'font-sizes', name: 'Font sizes'},
+			{id: 'holder', name: 'Holder'},
+			{id: 'navigator', name: 'Navigator'},
+			{id: 'responsive-images', name: 'Responsive images'},
+			{id: 'share', name: 'Share'},
+			{id: 'xbox', name: 'Xbox'}
+		]
+
+extends /templates/home.jade
 
 block content
-	nav.navbar.navbar-light.bg-light.mb-3
-		.dropdown
-			button.btn.btn-secondary.dropdown-toggle(data-toggle='dropdown')= page.title
-			.dropdown-menu.js-nav-section
-	.container-fluid
-		.justify-content-center.row
-			.col-12.col-md-8
-				include /includes/font-family.jade
-				include /includes/font-size.jade
-				include /includes/holder.jade
-				include /includes/navigator.jade
-				include /includes/responsive-images.jade
-				include /includes/share.jade
-				include /includes/xbox.jade
-		.small.text-center
-			hr
-			p!= '&copy; 2008-' + year + ' Sávio Mendes, '
-				a(href='http://saviomd.com/')= 'saviomd.com'
-
-	script.
-		var navItens = [];
-		$('.card').each(function(){
-			var href = '#' + this.id;
-			var text = $(this).find('.card-header').text();
-			navItens.push('<a class="dropdown-item" href="' + href + '">' + text + '</a>');
-		});
-		$('.js-nav-section').html(navItens).find('a').smoothScroll();
+	.justify-content-center.row
+		.col-12.col-sm-8.col-md-6.col-lg-4
+			.list-group
+				each page in pages
+					a.list-group-item.list-group-item-action(href='p/' + page.id + '.html')= page.name

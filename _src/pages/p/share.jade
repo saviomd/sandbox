@@ -1,0 +1,43 @@
+block pageData
+	-
+		page = {}
+		page.path = 'p/share.html'
+		page.title = 'Share'
+		page.description = '??'
+
+		socialNetworks = [
+			{
+				'name': 'Facebook',
+				'url': 'https://www.facebook.com/sharer/sharer.php?u={{url}}'
+			},
+			{
+				'name': 'Twitter',
+				'url': 'https://twitter.com/intent/tweet?url={{url}}&text={{text}}'
+			},
+			{
+				'name': 'Google +',
+				'url': 'https://plus.google.com/share?url={{url}}'
+			}
+		]
+		linkShare = {
+			'url': encodeURIComponent(site.url + '/' + page.path),
+			'text': encodeURIComponent(page.title)
+		}
+
+extends /templates/p.jade
+
+block content
+	each socialNetwork in socialNetworks
+		- var url = socialNetwork.url.replace('{{url}}', linkShare.url)
+		if (socialNetwork.name === 'Twitter')
+			- url = url.replace('{{text}}', linkShare.text)
+		a.btn.btn-secondary.js-link-share(href=url, target='_blank')= socialNetwork.name
+		= ' '
+
+block script
+	script.
+		$('.js-link-share').on('click', function(e) {
+			e.preventDefault();
+			var href = $(this).attr('href');
+			window.open(href, 'link-share', 'left=200, top=100, width=500, height=500');
+		});

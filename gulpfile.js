@@ -12,13 +12,13 @@ tasks
 */
 gulp.task('clean', function(cb) {
 	return del([
-			'+(css|fonts|js)',
+			'+(css|fonts|js|p)',
 			'index.html'
 		], cb)
 });
 
 gulp.task('html', function() {
-	return gulp.src('_src/pages/*.jade')
+	return gulp.src('_src/pages/**/*.jade')
 		.pipe(jade(jadeConfig))
 		.pipe(gulp.dest('./'))
 });
@@ -46,14 +46,6 @@ gulp.task('jsVendor', function() {
 		.pipe(gulp.dest('js'))
 });
 
-gulp.task('jsCopy', function() {
-	return gulp.src([
-			'node_modules/html5shiv/dist/html5shiv.min.js',
-			'node_modules/respond.js/dest/respond.min.js'
-		])
-		.pipe(gulp.dest('js'))
-});
-
 gulp.task('fontsCopy', function() {
 	return gulp.src([
 			'node_modules/font-awesome/fonts/*'
@@ -70,7 +62,7 @@ build and dev tasks
 ====================
 */
 gulp.task('default', ['clean'], function() {
-	gulp.start('html', 'cssVendor', 'jsVendor', 'jsCopy', 'fontsCopy');
+	gulp.start('html', 'cssVendor', 'jsVendor', 'fontsCopy');
 });
 
 gulp.task('dev', ['browserSync'], function() {

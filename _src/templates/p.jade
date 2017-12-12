@@ -2,7 +2,6 @@ include /data/site.jade
 
 doctype html
 html(lang=site.lang)
-
 	block pageData
 
 	head
@@ -11,11 +10,17 @@ html(lang=site.lang)
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
 		title= page.title
 		meta(name='description', content=page.description)
-		link(rel='stylesheet', href='css/vendor.css')
-		<!--[if lt IE 9]>
-		script(src='js/html5shiv.min.js')
-		script(src='js/respond.min.js')
-		<![endif]-->
-		script(src='js/vendor.js')
+		link(rel='stylesheet', href='../css/vendor.css')
+		script(src='../js/vendor.js')
+		block style
 	body
-		block content
+		include /includes/header.jade
+		.container-fluid
+			.justify-content-center.row
+				.col-12.col-md-8
+					.card.mb-3
+						h2.card-header= page.title
+						.card-body
+							block content
+			include /includes/footer.jade
+		block script

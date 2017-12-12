@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Share</title>
+    <meta name="description" content="??">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <script src="../js/vendor.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light mb-3"><a href="https://saviomd.com/sandbox" class="navbar-brand">Sandbox</a></nav>
+    <div class="container-fluid">
+      <div class="justify-content-center row">
+        <div class="col-12 col-md-8">
+          <div class="card mb-3">
+            <h2 class="card-header">Share</h2>
+            <div class="card-body"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsaviomd.com%2Fsandbox%2Fp%2Fshare.html" target="_blank" class="btn btn-secondary js-link-share">Facebook</a> <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsaviomd.com%2Fsandbox%2Fp%2Fshare.html&amp;text=Share" target="_blank" class="btn btn-secondary js-link-share">Twitter</a> <a href="https://plus.google.com/share?url=https%3A%2F%2Fsaviomd.com%2Fsandbox%2Fp%2Fshare.html" target="_blank" class="btn btn-secondary js-link-share">Google +</a> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="small text-center">
+        <hr>
+        <p>&copy; 2008-2017<a href="http://saviomd.com/" target="_blank" class="ml-1"><img alt="saviomd.com" src="https://saviomd.com/img/favicon.png" height="15" width="15"> Sávio Mendes</a></p>
+      </div>
+    </div>
+    <script>
+      $('.js-link-share').on('click', function(e) {
+      	e.preventDefault();
+      	var href = $(this).attr('href');
+      	window.open(href, 'link-share', 'left=200, top=100, width=500, height=500');
+      });
+    </script>
+  </body>
+</html>

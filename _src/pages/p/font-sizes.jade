@@ -1,0 +1,14 @@
+block pageData
+	-
+		page = {}
+		page.path = 'p/font-sizes.html'
+		page.title = 'Font sizes'
+		page.description = '??'
+
+		fontSizes = ['72', '60', '48', '36', '24', '21', '18', '16', '14', '12', '11', '10', '9', '8', '7', '6']
+
+extends /templates/p.jade
+
+block content
+	each fontSize in fontSizes
+		p(style='font-size: ' + fontSize + 'px')= fontSize + '. Lorem ipsum dolor sit amet'

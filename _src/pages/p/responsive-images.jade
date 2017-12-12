@@ -1,0 +1,25 @@
+block pageData
+	-
+		page = {}
+		page.path = 'p/responsive-images.html'
+		page.title = 'Responsive images'
+		page.description = '??'
+
+extends /templates/p.jade
+
+block content
+	.container
+		.row.mb-3
+			.col-12
+				img.img-fluid(src='https://via.placeholder.com/544x408', srcset='https://via.placeholder.com/544x408 544w, https://via.placeholder.com/992x744 992w', sizes='100vw')
+		.row.mb-3
+			.col-6
+				img.img-fluid(src='https://via.placeholder.com/272x204', srcset='https://via.placeholder.com/272x204 272w, https://via.placeholder.com/496x372 496w', sizes='50vw')
+			.col-6
+				img.img-fluid(src='https://via.placeholder.com/272x204', srcset='https://via.placeholder.com/272x204 272w, https://via.placeholder.com/496x372 496w', sizes='50vw')
+		.row.mb-3
+			.col-12
+				picture
+					source(media='(min-width: 48em)', srcset='https://via.placeholder.com/992x744 992w')
+					source(srcset='https://via.placeholder.com/272x204 272w, https://via.placeholder.com/544x408 544w')
+					img.img-fluid(src='https://via.placeholder.com/992x744')

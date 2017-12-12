@@ -1,0 +1,19 @@
+include /data/site.jade
+
+doctype html
+html(lang=site.lang)
+	block pageData
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
+		title= page.title
+		meta(name='description', content=page.description)
+		link(rel='stylesheet', href='css/vendor.css')
+		script(src='js/vendor.js')
+	body
+		include /includes/header.jade
+		.container-fluid
+			block content
+			include /includes/footer.jade
