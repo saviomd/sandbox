@@ -12,7 +12,7 @@ tasks
 */
 gulp.task('clean', function(cb) {
 	return del([
-			'+(css|fonts|js|p)',
+			'+(assets|p)',
 			'index.html'
 		], cb)
 });
@@ -23,35 +23,16 @@ gulp.task('html', function() {
 		.pipe(gulp.dest('./'))
 });
 
-gulp.task('cssVendor', function() {
+gulp.task('copyAssets', function() {
 	return gulp.src([
 			'node_modules/bootstrap/dist/css/bootstrap.min.css',
-			'node_modules/animate.css/animate.min.css',
-			'node_modules/font-awesome/css/font-awesome.min.css'
-		])
-		.pipe(concat('vendor.css'))
-		.pipe(gulp.dest('css'))
-});
-
-gulp.task('jsVendor', function() {
-	return gulp.src([
-			'node_modules/jquery/dist/jquery.min.js',
-			'node_modules/popper.js/dist/umd/popper.min.js',
 			'node_modules/bootstrap/dist/js/bootstrap.min.js',
 			'node_modules/holderjs/holder.min.js',
-			'node_modules/jquery-smooth-scroll/jquery.smooth-scroll.min.js',
-			'node_modules/wow/wow.min.js'
+			'node_modules/jquery/dist/jquery.min.js',
+			'node_modules/popper.js/dist/umd/popper.min.js'
 		])
-		.pipe(concat('vendor.js'))
-		.pipe(gulp.dest('js'))
-});
-
-gulp.task('fontsCopy', function() {
-	return gulp.src([
-			'node_modules/font-awesome/fonts/*'
-		])
-		.pipe(gulp.dest('fonts'))
-});
+		.pipe(gulp.dest('assets'))
+})
 
 gulp.task('browserSync', function() {
 	browserSync.init(browserSyncConfig);
@@ -62,7 +43,7 @@ build and dev tasks
 ====================
 */
 gulp.task('default', ['clean'], function() {
-	gulp.start('html', 'cssVendor', 'jsVendor', 'fontsCopy');
+	gulp.start('html', 'copyAssets');
 });
 
 gulp.task('dev', ['browserSync'], function() {

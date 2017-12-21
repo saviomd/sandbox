@@ -3,7 +3,6 @@ block pageData
 		page = {}
 		page.path = 'p/font-family.html'
 		page.title = 'Font family'
-		page.description = '??'
 
 		fontFamilies = ['Arial', 'Baskerville', 'Cambria', 'Century Gothic', 'Consolas', 'Copperplate Light', 'Courier New', 'Franklin Gothic Medium', 'Futura', 'Garamond', 'Geneva', 'Georgia', 'Gill Sans', 'Helvetica', 'Impact', 'Lucida Sans', 'Palatino', 'Tahoma', 'Times', 'Trebuchet MS', 'Verdana']
 		exampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum lorem sit amet mauris porttitor porta. ABCDEFGHIJKLMNOPQRSTUVWXYZ. abcdefghijklmnopqrstuvwxyz. 1234567890 &lt;&gt;@#$%&?!'
@@ -114,3 +113,4 @@ block content
 		div(class=fontFamily.toLowerCase().replace(/ /g, '-'))
 			h3!= text
 			p!= text
+			hr

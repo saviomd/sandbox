@@ -3,7 +3,6 @@ block pageData
 		page = {}
 		page.path = 'p/holder.html'
 		page.title = 'Holder'
-		page.description = '??'
 
 extends /templates/p.jade
 
@@ -11,3 +10,6 @@ block content
 	//- http://imsky.github.io/holder/
 
 	img.img-fluid(data-src='holder.js/800x600?auto=yes&bg=ccc&fg=666&text=Hello&size=30&align=left&outline=yes')
+
+block script
+	script(src='../assets/holder.min.js')

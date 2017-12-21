@@ -14,7 +14,6 @@
     "start": "gulp dev"
   },
   "dependencies": {
-    "animate.css": "^3.5.2",
     "bootstrap": "^4.0.0-beta.2",
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
@@ -24,7 +23,6 @@
     "gulp-jade": "^1.1.0",
     "holderjs": "^2.9.4",
     "jquery": "^3.2.1",
-    "jquery-smooth-scroll": "^2.2.0",
     "popper.js": "^1.13.0",
     "tools-config-saviomd": "github:saviomd/tools-config-saviomd"
   }

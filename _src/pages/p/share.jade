@@ -3,7 +3,6 @@ block pageData
 		page = {}
 		page.path = 'p/share.html'
 		page.title = 'Share'
-		page.description = '??'
 
 		socialNetworks = [
 			{
@@ -35,6 +34,7 @@ block content
 		= ' '
 
 block script
+	script(src='../assets/jquery.min.js')
 	script.
 		$('.js-link-share').on('click', function(e) {
 			e.preventDefault();
