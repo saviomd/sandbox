@@ -1,0 +1,16 @@
+block pageData
+	-
+		page = {}
+		page.path = 'p/font-awesome.html'
+		page.title = 'Font Awesome'
+
+		fontAwesomeIcons = ['fas fa-car', 'fas fa-film', 'fas fa-futbol', 'fas fa-mobile-alt', 'fab fa-twitter']
+
+extends /templates/p.jade
+
+block content
+	each fontAwesomeIcon in fontAwesomeIcons
+		span.h1.mb-0.mr-3(class=fontAwesomeIcon)
+
+block script
+	script(defer, src='https://use.fontawesome.com/releases/v5.0.2/js/all.js')

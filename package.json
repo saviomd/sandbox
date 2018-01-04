@@ -1,6 +1,6 @@
 {
   "name": "sandbox",
-  "version": "1.0.20171212",
+  "version": "1.0.20180104",
   "description": "Experimentos e testes",
   "author": "Sávio Mendes",
   "license": "UNLICENSED",
@@ -14,10 +14,9 @@
     "start": "gulp dev"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-beta.2",
-    "browser-sync": "^2.18.13",
+    "bootstrap": "^4.0.0-beta.3",
+    "browser-sync": "^2.23.2",
     "del": "^3.0.0",
-    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-jade": "^1.1.0",
