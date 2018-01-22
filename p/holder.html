@@ -5,23 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Holder</title>
-    <link rel="stylesheet" href="../assets/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/tailwind.css">
   </head>
-  <body>
-    <nav class="navbar navbar-light bg-light mb-3"><a href="https://saviomd.com/sandbox" class="navbar-brand">Sandbox</a></nav>
-    <div class="container-fluid">
-      <div class="justify-content-center row">
-        <div class="col-12 col-md-8">
-          <div class="card mb-3">
-            <h2 class="card-header">Holder</h2>
-            <div class="card-body"><img data-src="holder.js/800x600?auto=yes&amp;bg=ccc&amp;fg=666&amp;text=Hello&amp;size=30&amp;align=left&amp;outline=yes" class="img-fluid">
-            </div>
-          </div>
+  <body class="font-sans leading-normal">
+    <nav class="bg-grey-lightest border-grey border-b mb-4">
+      <div class="py-4 max-w-2xl mx-auto px-4"><a href="https://saviomd.com/sandbox" class="no-underline text-grey-darkest text-lg">Sandbox</a></div>
+    </nav>
+    <div class="max-w-2xl mx-auto px-4">
+      <div class="border border-grey mb-4 rounded">
+        <h2 class="bg-grey-lightest border-b border-grey p-4 rounded-t">Holder</h2>
+        <div class="p-4"><img data-src="holder.js/800x600?auto=yes&amp;bg=ccc&amp;fg=666&amp;text=Hello&amp;size=30&amp;align=left&amp;outline=yes">
         </div>
       </div>
-      <div class="small text-center">
-        <hr>
-        <p>&copy; 2008-2018<a href="http://saviomd.com/" target="_blank" class="ml-1"><img alt="saviomd.com" src="https://saviomd.com/img/favicon.png" height="15" width="15" class="mr-1">Sávio Mendes</a></p>
+      <div class="border-grey border-t py-2 text-sm text-center">
+        <p>&copy; 2008-2018<a href="http://saviomd.com/" target="_blank" class="ml-1 no-underline hover:underline text-blue-dark hover:text-blue"><img alt="saviomd.com" src="https://saviomd.com/img/favicon.png" height="15" width="15" class="mr-1">Sávio Mendes</a></p>
       </div>
     </div>
     <script src="../assets/holder.min.js"></script>

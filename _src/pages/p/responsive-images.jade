@@ -7,18 +7,15 @@ block pageData
 extends /templates/p.jade
 
 block content
-	.container
-		.row.mb-3
-			.col-12
-				img.img-fluid(src='https://via.placeholder.com/544x408', srcset='https://via.placeholder.com/544x408 544w, https://via.placeholder.com/992x744 992w', sizes='100vw')
-		.row.mb-3
-			.col-6
-				img.img-fluid(src='https://via.placeholder.com/272x204', srcset='https://via.placeholder.com/272x204 272w, https://via.placeholder.com/496x372 496w', sizes='50vw')
-			.col-6
-				img.img-fluid(src='https://via.placeholder.com/272x204', srcset='https://via.placeholder.com/272x204 272w, https://via.placeholder.com/496x372 496w', sizes='50vw')
-		.row.mb-3
-			.col-12
-				picture
-					source(media='(min-width: 48em)', srcset='https://via.placeholder.com/992x744 992w')
-					source(srcset='https://via.placeholder.com/272x204 272w, https://via.placeholder.com/544x408 544w')
-					img.img-fluid(src='https://via.placeholder.com/992x744')
+	.mb-4
+		img(src='https://via.placeholder.com/544x408', srcset='https://via.placeholder.com/544x408 544w, https://via.placeholder.com/992x744 992w', sizes='100vw')
+	.clearfix.-mx-4.mb-4
+		.float-left.px-4(class='w-1/2')
+			img(src='https://via.placeholder.com/272x204', srcset='https://via.placeholder.com/272x204 272w, https://via.placeholder.com/496x372 496w', sizes='50vw')
+		.float-left.px-4(class='w-1/2')
+			img(src='https://via.placeholder.com/272x204', srcset='https://via.placeholder.com/272x204 272w, https://via.placeholder.com/496x372 496w', sizes='50vw')
+	.mb-4
+		picture
+			source(media='(min-width: 48em)', srcset='https://via.placeholder.com/992x744 992w')
+			source(srcset='https://via.placeholder.com/272x204 272w, https://via.placeholder.com/544x408 544w')
+			img(src='https://via.placeholder.com/992x744')

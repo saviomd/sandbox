@@ -18,8 +18,8 @@ block pageData
 extends /templates/home.jade
 
 block content
-	.justify-content-center.row
-		.col-12.col-sm-8.col-md-6.col-lg-4
-			.list-group
-				each page in pages
-					a.list-group-item.list-group-item-action(href='p/' + page.id + '.html')= page.name
+	.max-w-xs.mb-4.mx-auto
+		ul.border-grey-light.list-reset
+			each page in pages
+				li
+					a.mb-4.w-full(class=style.btnPrimary, href='p/' + page.id + '.html')= page.name

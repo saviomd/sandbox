@@ -1,4 +1,5 @@
 include /data/site.jade
+include /data/style.jade
 
 doctype html
 html(lang=site.lang)
@@ -9,16 +10,14 @@ html(lang=site.lang)
 		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
 		title= page.title
-		link(rel='stylesheet', href='../assets/bootstrap.min.css')
+		link(rel='stylesheet', href='../assets/tailwind.css')
 		block style
-	body
+	body(class=`${style.base}`)
 		include /includes/header.jade
-		.container-fluid
-			.justify-content-center.row
-				.col-12.col-md-8
-					.card.mb-3
-						h2.card-header= page.title
-						.card-body
-							block content
+		div(class=`${style.container}`)
+			.border.border-grey.mb-4.rounded
+				h2.bg-grey-lightest.border-b.border-grey.p-4.rounded-t= page.title
+				.p-4
+					block content
 			include /includes/footer.jade
 		block script

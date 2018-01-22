@@ -25,11 +25,9 @@ gulp.task('html', function() {
 
 gulp.task('copyAssets', function() {
 	return gulp.src([
-			'node_modules/bootstrap/dist/css/bootstrap.min.css',
-			'node_modules/bootstrap/dist/js/bootstrap.min.js',
 			'node_modules/holderjs/holder.min.js',
 			'node_modules/jquery/dist/jquery.min.js',
-			'node_modules/popper.js/dist/umd/popper.min.js'
+			'node_modules/tailwindcss/dist/tailwind.css'
 		])
 		.pipe(gulp.dest('assets'))
 })

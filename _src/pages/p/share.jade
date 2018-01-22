@@ -30,8 +30,7 @@ block content
 		- var url = socialNetwork.url.replace('{{url}}', linkShare.url)
 		if (socialNetwork.name === 'Twitter')
 			- url = url.replace('{{text}}', linkShare.text)
-		a.btn.btn-secondary.js-link-share(href=url, target='_blank')= socialNetwork.name
-		= ' '
+		a.mr-1.js-link-share(class=style.btnPrimary, href=url, target='_blank')= socialNetwork.name
 
 block script
 	script(src='../assets/jquery.min.js')

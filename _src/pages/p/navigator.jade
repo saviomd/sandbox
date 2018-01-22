@@ -17,10 +17,10 @@ block content
 			htmlTag.setAttribute('data-platform', navigator.platform );
 			// ex css: html[data-useragent*='Chrome/13.0'] p {background:#000}
 			var html = '';
-			html += '<p><strong>userAgent</strong>: ' + navigator.userAgent + '</p>';
-			html += '<p><strong>platform</strong>: ' + navigator.platform + '</p>';
-			html += '<p><strong>language</strong>: ' + navigator.language + '</p>';
-			html += '<p><strong>cookieEnabled</strong>: ' + navigator.cookieEnabled + '</p>';
-			html += '<p><strong>vendor</strong>: ' + navigator.vendor + '</p>';
+			html += '<p class="mb-4"><strong>userAgent</strong>: ' + navigator.userAgent + '</p>';
+			html += '<p class="mb-4"><strong>platform</strong>: ' + navigator.platform + '</p>';
+			html += '<p class="mb-4"><strong>language</strong>: ' + navigator.language + '</p>';
+			html += '<p class="mb-4"><strong>cookieEnabled</strong>: ' + navigator.cookieEnabled + '</p>';
+			html += '<p class="mb-4"><strong>vendor</strong>: ' + navigator.vendor + '</p>';
 			document.write(html);
 		})();

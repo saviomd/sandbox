@@ -5,40 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Responsive images</title>
-    <link rel="stylesheet" href="../assets/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/tailwind.css">
   </head>
-  <body>
-    <nav class="navbar navbar-light bg-light mb-3"><a href="https://saviomd.com/sandbox" class="navbar-brand">Sandbox</a></nav>
-    <div class="container-fluid">
-      <div class="justify-content-center row">
-        <div class="col-12 col-md-8">
-          <div class="card mb-3">
-            <h2 class="card-header">Responsive images</h2>
-            <div class="card-body">
-              <div class="container">
-                <div class="row mb-3">
-                  <div class="col-12"><img src="https://via.placeholder.com/544x408" srcset="https://via.placeholder.com/544x408 544w, https://via.placeholder.com/992x744 992w" sizes="100vw" class="img-fluid"></div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-6"><img src="https://via.placeholder.com/272x204" srcset="https://via.placeholder.com/272x204 272w, https://via.placeholder.com/496x372 496w" sizes="50vw" class="img-fluid"></div>
-                  <div class="col-6"><img src="https://via.placeholder.com/272x204" srcset="https://via.placeholder.com/272x204 272w, https://via.placeholder.com/496x372 496w" sizes="50vw" class="img-fluid"></div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-12">
-                    <picture>
-                      <source media="(min-width: 48em)" srcset="https://via.placeholder.com/992x744 992w">
-                      <source srcset="https://via.placeholder.com/272x204 272w, https://via.placeholder.com/544x408 544w"><img src="https://via.placeholder.com/992x744" class="img-fluid">
-                    </picture>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <body class="font-sans leading-normal">
+    <nav class="bg-grey-lightest border-grey border-b mb-4">
+      <div class="py-4 max-w-2xl mx-auto px-4"><a href="https://saviomd.com/sandbox" class="no-underline text-grey-darkest text-lg">Sandbox</a></div>
+    </nav>
+    <div class="max-w-2xl mx-auto px-4">
+      <div class="border border-grey mb-4 rounded">
+        <h2 class="bg-grey-lightest border-b border-grey p-4 rounded-t">Responsive images</h2>
+        <div class="p-4">
+          <div class="mb-4"><img src="https://via.placeholder.com/544x408" srcset="https://via.placeholder.com/544x408 544w, https://via.placeholder.com/992x744 992w" sizes="100vw"></div>
+          <div class="clearfix -mx-4 mb-4">
+            <div class="float-left px-4 w-1/2"><img src="https://via.placeholder.com/272x204" srcset="https://via.placeholder.com/272x204 272w, https://via.placeholder.com/496x372 496w" sizes="50vw"></div>
+            <div class="float-left px-4 w-1/2"><img src="https://via.placeholder.com/272x204" srcset="https://via.placeholder.com/272x204 272w, https://via.placeholder.com/496x372 496w" sizes="50vw"></div>
+          </div>
+          <div class="mb-4">
+            <picture>
+              <source media="(min-width: 48em)" srcset="https://via.placeholder.com/992x744 992w">
+              <source srcset="https://via.placeholder.com/272x204 272w, https://via.placeholder.com/544x408 544w"><img src="https://via.placeholder.com/992x744">
+            </picture>
           </div>
         </div>
       </div>
-      <div class="small text-center">
-        <hr>
-        <p>&copy; 2008-2018<a href="http://saviomd.com/" target="_blank" class="ml-1"><img alt="saviomd.com" src="https://saviomd.com/img/favicon.png" height="15" width="15" class="mr-1">Sávio Mendes</a></p>
+      <div class="border-grey border-t py-2 text-sm text-center">
+        <p>&copy; 2008-2018<a href="http://saviomd.com/" target="_blank" class="ml-1 no-underline hover:underline text-blue-dark hover:text-blue"><img alt="saviomd.com" src="https://saviomd.com/img/favicon.png" height="15" width="15" class="mr-1">Sávio Mendes</a></p>
       </div>
     </div>
   </body>

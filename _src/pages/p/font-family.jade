@@ -108,9 +108,10 @@ block style
 block content
 	//- http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
 
-	each fontFamily in fontFamilies
-		- var text = fontFamily + '. ' + exampleText
-		div(class=fontFamily.toLowerCase().replace(/ /g, '-'))
-			h3!= text
-			p!= text
-			hr
+	.break-words
+		each fontFamily in fontFamilies
+			- var text = fontFamily + '. ' + exampleText
+			.mb-8(class=fontFamily.toLowerCase().replace(/ /g, '-'))
+				h3.mb-4!= text
+				p.mb-4!= text
+				hr
