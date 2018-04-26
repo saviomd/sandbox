@@ -1,0 +1,50 @@
+block pageData
+	-
+		page = {}
+		page.path = 'p/flexbox.html'
+		page.title = 'Flexbox'
+
+extends /templates/p.jade
+
+block content
+	.border-b.flex.flex-wrap.mb-4.-mx-4.pb-4
+		- cols = 0
+		while cols < 4
+			- cols++
+			.px-4.w-full(class='sm:w-1/2 md:w-1/4')
+				.bg-blue-lighter.mb-4.p-4.text-center
+					div= 'xs-100%'
+					div= 'sm-50%'
+					div= 'md-25%'
+	.border-b.flex.flex-no-wrap.mb-4.-mx-4.overflow-x-scroll.pb-4
+		- cols = 0
+		while cols < 10
+			- cols++
+			.flex-none.px-4.w-64
+				.bg-blue-lighter.mb-4.p-4.text-center= cols
+	.border-b.flex.flex-wrap.mb-4.-mx-4.pb-4.items-center
+		.flex-1.px-4
+			.bg-blue-lighter.mb-4.p-4.text-center
+				div= '1'
+		.flex-1.px-4
+			.bg-blue-lighter.mb-4.p-4.text-center
+				div= '1'
+				div= '2'
+		.flex-1.px-4
+			.bg-blue-lighter.mb-4.p-4.text-center
+				div= '1'
+				div= '2'
+				div= '3'
+	.border-b.flex.flex-wrap.mb-4.-mx-4.pb-4.items-end
+		.flex-1.px-4
+			.bg-blue-lighter.mb-4.p-4.text-center
+				div= '1'
+		.flex-1.px-4
+			.bg-blue-lighter.mb-4.p-4.text-center
+				div= '1'
+				div= '2'
+		.flex-1.px-4
+			.bg-blue-lighter.mb-4.p-4.text-center
+				div= '1'
+				div= '2'
+				div= '3'
