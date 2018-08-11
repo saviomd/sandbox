@@ -1,10 +1,10 @@
+extends /templates/p
+
 block pageData
 	-
 		page = {}
 		page.path = 'p/xbox.html'
 		page.title = 'Xbox'
-
-extends /templates/p.jade
 
 block content
 	iframe.block.mb-4(src='https://gamercard.xbox.com/pt-BR/saviomd.card', height='135', width='200')

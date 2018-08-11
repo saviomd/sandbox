@@ -1,5 +1,5 @@
-include /data/site.jade
-include /data/style.jade
+include /data/site
+include /data/style
 
 doctype html
 html(lang=site.lang)
@@ -13,11 +13,11 @@ html(lang=site.lang)
 		link(rel='stylesheet', href='../assets/tailwind.css')
 		block style
 	body(class=`${style.base}`)
-		include /includes/header.jade
+		include /includes/header
 		div(class=`${style.container}`)
 			.border.border-grey.mb-4.rounded
 				h2.bg-grey-lightest.border-b.border-grey.p-4.rounded-t= page.title
 				.p-4
 					block content
-			include /includes/footer.jade
+			include /includes/footer
 		block script

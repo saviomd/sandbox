@@ -1,3 +1,5 @@
+extends /templates/p
+
 block pageData
 	-
 		page = {}
@@ -22,8 +24,6 @@ block pageData
 			'url': encodeURIComponent(site.url + '/' + page.path),
 			'text': encodeURIComponent(page.title)
 		}
-
-extends /templates/p.jade
 
 block content
 	each socialNetwork in socialNetworks
